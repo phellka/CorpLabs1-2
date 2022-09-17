@@ -17,7 +17,7 @@ namespace CorpLabsComponents.models
             return "Id = " + Id.ToString() + " " +
                 "Age = " + Age.ToString() + " " +
                 "Name = " + Name + " " +
-                "Surname = " + Surname;
+                "Surnamee = " + Surname;
         }
     }
 }
