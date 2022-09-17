@@ -55,6 +55,9 @@
     <Compile Include="models\Human.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,6 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MadyshevUnvisualComponents\MadyshevUnvisualComponents.csproj">
+      <Project>{1755fe45-fd6d-4636-ab40-375a93655267}</Project>
+      <Name>MadyshevUnvisualComponents</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MadyshevVisualComponents\MadyshevVisualComponents.csproj">
       <Project>{0d48c669-27a3-4b01-bf5f-a27d7d4deeaa}</Project>
       <Name>MadyshevVisualComponents</Name>

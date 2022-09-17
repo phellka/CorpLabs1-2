@@ -17,13 +17,9 @@ namespace MadyshevVisualComponents
         {
             get
             {
-                if (checkBox.Checked)
+                if (checkBox.Checked || textBox.Text == "")
                 {
                     return null;
-                }
-                if (textBox.Text == "")
-                {
-                    throw new Exception("value not entered");
                 }
                 Double res = 0;
                 if (Double.TryParse(textBox.Text, out res))

@@ -29,35 +29,30 @@ namespace CorpLabsComponents
         /// </summary>
         private void InitializeComponent()
         {
-            this.madyshevListBox = new MadyshevVisualComponents.MadyshevListBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.buttonGetSelected = new System.Windows.Forms.Button();
             this.buttonSetSelected = new System.Windows.Forms.Button();
             this.textBoxSelectedItem = new System.Windows.Forms.TextBox();
-            this.madyshevTextBox = new MadyshevVisualComponents.MadyshevTextBox();
             this.buttonEnter = new System.Windows.Forms.Button();
-            this.madyshevDataGridView = new MadyshevVisualComponents.MadyshevDataGridView();
             this.buttonClearGrid = new System.Windows.Forms.Button();
             this.buttonGriSelectedObjectGrid = new System.Windows.Forms.Button();
             this.buttonSetSelectedIndexGrid = new System.Windows.Forms.Button();
             this.buttonGetSelectedIndexGrid = new System.Windows.Forms.Button();
             this.numericUpDownSelectedIndexGrid = new System.Windows.Forms.NumericUpDown();
+            this.buttonDoucmentWithTable = new System.Windows.Forms.Button();
+            this.buttonCreateDocWithCustomTable = new System.Windows.Forms.Button();
+            this.madyshevDataGridView = new MadyshevVisualComponents.MadyshevDataGridView();
+            this.madyshevTextBox = new MadyshevVisualComponents.MadyshevTextBox();
+            this.madyshevListBox = new MadyshevVisualComponents.MadyshevListBox();
+            this.buttonCreateDocHistogram = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownSelectedIndexGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // madyshevListBox
-            // 
-            this.madyshevListBox.ListBoxValue = "";
-            this.madyshevListBox.Location = new System.Drawing.Point(12, 12);
-            this.madyshevListBox.Name = "madyshevListBox";
-            this.madyshevListBox.Size = new System.Drawing.Size(188, 72);
-            this.madyshevListBox.TabIndex = 0;
-            // 
             // buttonClear
             // 
-            this.buttonClear.Location = new System.Drawing.Point(12, 90);
+            this.buttonClear.Location = new System.Drawing.Point(10, 78);
             this.buttonClear.Name = "buttonClear";
-            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.Size = new System.Drawing.Size(64, 20);
             this.buttonClear.TabIndex = 1;
             this.buttonClear.Text = "clear";
             this.buttonClear.UseVisualStyleBackColor = true;
@@ -65,9 +60,9 @@ namespace CorpLabsComponents
             // 
             // buttonGetSelected
             // 
-            this.buttonGetSelected.Location = new System.Drawing.Point(114, 90);
+            this.buttonGetSelected.Location = new System.Drawing.Point(98, 78);
             this.buttonGetSelected.Name = "buttonGetSelected";
-            this.buttonGetSelected.Size = new System.Drawing.Size(86, 23);
+            this.buttonGetSelected.Size = new System.Drawing.Size(74, 20);
             this.buttonGetSelected.TabIndex = 2;
             this.buttonGetSelected.Text = "Get Selected";
             this.buttonGetSelected.UseVisualStyleBackColor = true;
@@ -75,9 +70,9 @@ namespace CorpLabsComponents
             // 
             // buttonSetSelected
             // 
-            this.buttonSetSelected.Location = new System.Drawing.Point(114, 133);
+            this.buttonSetSelected.Location = new System.Drawing.Point(98, 115);
             this.buttonSetSelected.Name = "buttonSetSelected";
-            this.buttonSetSelected.Size = new System.Drawing.Size(86, 23);
+            this.buttonSetSelected.Size = new System.Drawing.Size(74, 20);
             this.buttonSetSelected.TabIndex = 4;
             this.buttonSetSelected.Text = "Set Selected";
             this.buttonSetSelected.UseVisualStyleBackColor = true;
@@ -85,41 +80,26 @@ namespace CorpLabsComponents
             // 
             // textBoxSelectedItem
             // 
-            this.textBoxSelectedItem.Location = new System.Drawing.Point(12, 134);
+            this.textBoxSelectedItem.Location = new System.Drawing.Point(10, 116);
             this.textBoxSelectedItem.Name = "textBoxSelectedItem";
-            this.textBoxSelectedItem.Size = new System.Drawing.Size(75, 23);
+            this.textBoxSelectedItem.Size = new System.Drawing.Size(65, 20);
             this.textBoxSelectedItem.TabIndex = 5;
-            // 
-            // madyshevTextBox
-            // 
-            this.madyshevTextBox.Location = new System.Drawing.Point(263, 12);
-            this.madyshevTextBox.Name = "madyshevTextBox";
-            this.madyshevTextBox.Size = new System.Drawing.Size(150, 44);
-            this.madyshevTextBox.TabIndex = 6;
             // 
             // buttonEnter
             // 
-            this.buttonEnter.Location = new System.Drawing.Point(287, 61);
+            this.buttonEnter.Location = new System.Drawing.Point(246, 53);
             this.buttonEnter.Name = "buttonEnter";
-            this.buttonEnter.Size = new System.Drawing.Size(86, 23);
+            this.buttonEnter.Size = new System.Drawing.Size(74, 20);
             this.buttonEnter.TabIndex = 7;
             this.buttonEnter.Text = "Enter";
             this.buttonEnter.UseVisualStyleBackColor = true;
             this.buttonEnter.Click += new System.EventHandler(this.buttonEnter_Click);
             // 
-            // madyshevDataGridView
-            // 
-            this.madyshevDataGridView.DataGridSelectedRow = -1;
-            this.madyshevDataGridView.Location = new System.Drawing.Point(451, 12);
-            this.madyshevDataGridView.Name = "madyshevDataGridView";
-            this.madyshevDataGridView.Size = new System.Drawing.Size(337, 225);
-            this.madyshevDataGridView.TabIndex = 8;
-            // 
             // buttonClearGrid
             // 
-            this.buttonClearGrid.Location = new System.Drawing.Point(451, 258);
+            this.buttonClearGrid.Location = new System.Drawing.Point(387, 224);
             this.buttonClearGrid.Name = "buttonClearGrid";
-            this.buttonClearGrid.Size = new System.Drawing.Size(75, 23);
+            this.buttonClearGrid.Size = new System.Drawing.Size(64, 20);
             this.buttonClearGrid.TabIndex = 9;
             this.buttonClearGrid.Text = "Clear";
             this.buttonClearGrid.UseVisualStyleBackColor = true;
@@ -127,9 +107,9 @@ namespace CorpLabsComponents
             // 
             // buttonGriSelectedObjectGrid
             // 
-            this.buttonGriSelectedObjectGrid.Location = new System.Drawing.Point(653, 258);
+            this.buttonGriSelectedObjectGrid.Location = new System.Drawing.Point(560, 224);
             this.buttonGriSelectedObjectGrid.Name = "buttonGriSelectedObjectGrid";
-            this.buttonGriSelectedObjectGrid.Size = new System.Drawing.Size(135, 23);
+            this.buttonGriSelectedObjectGrid.Size = new System.Drawing.Size(116, 20);
             this.buttonGriSelectedObjectGrid.TabIndex = 10;
             this.buttonGriSelectedObjectGrid.Text = "Get Selected Object";
             this.buttonGriSelectedObjectGrid.UseVisualStyleBackColor = true;
@@ -137,9 +117,9 @@ namespace CorpLabsComponents
             // 
             // buttonSetSelectedIndexGrid
             // 
-            this.buttonSetSelectedIndexGrid.Location = new System.Drawing.Point(542, 299);
+            this.buttonSetSelectedIndexGrid.Location = new System.Drawing.Point(465, 259);
             this.buttonSetSelectedIndexGrid.Name = "buttonSetSelectedIndexGrid";
-            this.buttonSetSelectedIndexGrid.Size = new System.Drawing.Size(96, 23);
+            this.buttonSetSelectedIndexGrid.Size = new System.Drawing.Size(82, 20);
             this.buttonSetSelectedIndexGrid.TabIndex = 11;
             this.buttonSetSelectedIndexGrid.Text = "Set Selected";
             this.buttonSetSelectedIndexGrid.UseVisualStyleBackColor = true;
@@ -147,9 +127,9 @@ namespace CorpLabsComponents
             // 
             // buttonGetSelectedIndexGrid
             // 
-            this.buttonGetSelectedIndexGrid.Location = new System.Drawing.Point(542, 258);
+            this.buttonGetSelectedIndexGrid.Location = new System.Drawing.Point(465, 224);
             this.buttonGetSelectedIndexGrid.Name = "buttonGetSelectedIndexGrid";
-            this.buttonGetSelectedIndexGrid.Size = new System.Drawing.Size(96, 23);
+            this.buttonGetSelectedIndexGrid.Size = new System.Drawing.Size(82, 20);
             this.buttonGetSelectedIndexGrid.TabIndex = 12;
             this.buttonGetSelectedIndexGrid.Text = "Get Selected";
             this.buttonGetSelectedIndexGrid.UseVisualStyleBackColor = true;
@@ -157,16 +137,73 @@ namespace CorpLabsComponents
             // 
             // numericUpDownSelectedIndexGrid
             // 
-            this.numericUpDownSelectedIndexGrid.Location = new System.Drawing.Point(451, 298);
+            this.numericUpDownSelectedIndexGrid.Location = new System.Drawing.Point(387, 258);
             this.numericUpDownSelectedIndexGrid.Name = "numericUpDownSelectedIndexGrid";
-            this.numericUpDownSelectedIndexGrid.Size = new System.Drawing.Size(75, 23);
+            this.numericUpDownSelectedIndexGrid.Size = new System.Drawing.Size(64, 20);
             this.numericUpDownSelectedIndexGrid.TabIndex = 13;
+            // 
+            // buttonDoucmentWithTable
+            // 
+            this.buttonDoucmentWithTable.Location = new System.Drawing.Point(12, 224);
+            this.buttonDoucmentWithTable.Name = "buttonDoucmentWithTable";
+            this.buttonDoucmentWithTable.Size = new System.Drawing.Size(160, 23);
+            this.buttonDoucmentWithTable.TabIndex = 14;
+            this.buttonDoucmentWithTable.Text = "Document with table";
+            this.buttonDoucmentWithTable.UseVisualStyleBackColor = true;
+            this.buttonDoucmentWithTable.Click += new System.EventHandler(this.buttonDoucmentWithTable_Click);
+            // 
+            // buttonCreateDocWithCustomTable
+            // 
+            this.buttonCreateDocWithCustomTable.Location = new System.Drawing.Point(10, 258);
+            this.buttonCreateDocWithCustomTable.Name = "buttonCreateDocWithCustomTable";
+            this.buttonCreateDocWithCustomTable.Size = new System.Drawing.Size(162, 23);
+            this.buttonCreateDocWithCustomTable.TabIndex = 15;
+            this.buttonCreateDocWithCustomTable.Text = "Document custom table";
+            this.buttonCreateDocWithCustomTable.UseVisualStyleBackColor = true;
+            this.buttonCreateDocWithCustomTable.Click += new System.EventHandler(this.buttonCreateDocCustomTable_Click);
+            // 
+            // madyshevDataGridView
+            // 
+            this.madyshevDataGridView.DataGridSelectedRow = -1;
+            this.madyshevDataGridView.Location = new System.Drawing.Point(387, 10);
+            this.madyshevDataGridView.Name = "madyshevDataGridView";
+            this.madyshevDataGridView.Size = new System.Drawing.Size(289, 195);
+            this.madyshevDataGridView.TabIndex = 8;
+            // 
+            // madyshevTextBox
+            // 
+            this.madyshevTextBox.Location = new System.Drawing.Point(225, 10);
+            this.madyshevTextBox.Name = "madyshevTextBox";
+            this.madyshevTextBox.Size = new System.Drawing.Size(129, 38);
+            this.madyshevTextBox.TabIndex = 6;
+            this.madyshevTextBox.TextBoxValue = null;
+            // 
+            // madyshevListBox
+            // 
+            this.madyshevListBox.ListBoxValue = "";
+            this.madyshevListBox.Location = new System.Drawing.Point(10, 10);
+            this.madyshevListBox.Name = "madyshevListBox";
+            this.madyshevListBox.Size = new System.Drawing.Size(161, 62);
+            this.madyshevListBox.TabIndex = 0;
+            // 
+            // buttonCreateDocHistogram
+            // 
+            this.buttonCreateDocHistogram.Location = new System.Drawing.Point(10, 288);
+            this.buttonCreateDocHistogram.Name = "buttonCreateDocHistogram";
+            this.buttonCreateDocHistogram.Size = new System.Drawing.Size(161, 23);
+            this.buttonCreateDocHistogram.TabIndex = 16;
+            this.buttonCreateDocHistogram.Text = "Document with histogram";
+            this.buttonCreateDocHistogram.UseVisualStyleBackColor = true;
+            this.buttonCreateDocHistogram.Click += new System.EventHandler(this.buttonCreateDocHistogram_Click);
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(686, 390);
+            this.Controls.Add(this.buttonCreateDocHistogram);
+            this.Controls.Add(this.buttonCreateDocWithCustomTable);
+            this.Controls.Add(this.buttonDoucmentWithTable);
             this.Controls.Add(this.numericUpDownSelectedIndexGrid);
             this.Controls.Add(this.buttonGetSelectedIndexGrid);
             this.Controls.Add(this.buttonSetSelectedIndexGrid);
@@ -204,6 +241,9 @@ namespace CorpLabsComponents
         private System.Windows.Forms.Button buttonSetSelectedIndexGrid;
         private System.Windows.Forms.Button buttonGetSelectedIndexGrid;
         private System.Windows.Forms.NumericUpDown numericUpDownSelectedIndexGrid;
+        private System.Windows.Forms.Button buttonDoucmentWithTable;
+        private System.Windows.Forms.Button buttonCreateDocWithCustomTable;
+        private System.Windows.Forms.Button buttonCreateDocHistogram;
     }
 }
 

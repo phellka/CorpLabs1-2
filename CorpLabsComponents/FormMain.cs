@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MadyshevVisualComponents.models;
 using CorpLabsComponents.models;
+using MadyshevUnvisualComponents;
+using MadyshevUnvisualComponents.Models;
 
 namespace CorpLabsComponents
 {
@@ -85,6 +87,83 @@ namespace CorpLabsComponents
         private void buttonGriSelectedObjectGrid_Click(object sender, EventArgs e)
         {
             MessageBox.Show(madyshevDataGridView.GetSelectedObjectIntoRow<Human>().ToString(), "Selected object");
+        }
+
+        private void buttonDoucmentWithTable_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new SaveFileDialog { Filter = "docx|*.docx" }) {
+                using (var docTables = new MadyshevDocTablesComponent())
+                {
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        docTables.CreateDoc(dialog.FileName, "Tema", new List<string[,]>()
+                        {
+                            new string[,] { { "1", "2", "3" }, { "4", "5", "6" }, { "7", "8", "9" }, { "10", "11", "12"} },
+                            new string[,] { { "1", "2" }, { "3", "4"}, { "5", "6"}},
+                            new string[,] { { "1"}, { "4"}, { "7"}, { "10"} }
+                        });
+                        MessageBox.Show("Complete", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
+        private void buttonCreateDocCustomTable_Click(object sender, EventArgs e)
+        {
+            using (MadyshevCustomTableComponent docCustomTableComponent = new MadyshevCustomTableComponent()) {
+                using (var dialog = new SaveFileDialog { Filter = "docx|*.docx" })
+                {
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        docCustomTableComponent.CreateDoc(new CustomTableData<Human>()
+                        {
+                            FileName = dialog.FileName,
+                            Title = "Tema",
+                            HeaderHeight = 1200,
+                            RowsHeight = 800,
+                            ColumnsHeaders = new List<string>()
+                                {
+                                "Возраст", "Имя", "Фамилия", "Номер"
+                                },
+                            ColumnsWidth = new List<int>()
+                                {
+                                1000, 1000, 1000, 800
+                                },
+                            ColumnsProperties = new List<string>()
+                                {
+                                "Age", "Name", "Surname", "Id"
+                                },
+                            Data = new List<Human>()
+                                {
+                                new Human() { Id = 1, Age = 15, Name = "Pavel", Surname = "Pavlov" },
+                                new Human() { Id = 2, Age = 22, Name = "Artem", Surname = "Artemov" },
+                                new Human() { Id = 3, Age = 62, Name = "Ivan", Surname = "Ivanov" }
+                                }
+                        });
+                        MessageBox.Show("Complete", "Success", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    }
+                }
+            }
+        }
+
+        private void buttonCreateDocHistogram_Click(object sender, EventArgs e)
+        {
+            using (var dialog = new SaveFileDialog { Filter = "docx|*.docx" }) {
+                using (var docHistogram = new DocHistogramComponent())
+                {
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        docHistogram.CreateDoc(dialog.FileName, "Tema", "Series", LegendLocation.TopRight, new List<ChartData>() {
+                            new ChartData() { Category = "cat", Expenses = 1 },
+                            new ChartData() { Category = "dog", Expenses = 2 },
+                            new ChartData() { Category = "human", Expenses = 5 },
+                            new ChartData() { Category = "mouse", Expenses = 1 }
+                        });
+                        MessageBox.Show("Complete", "Success", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    }
+                }
+            }
         }
     }
 }

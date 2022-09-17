@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CorpLabsComponents", "CorpL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadyshevVisualComponents", "MadyshevVisualComponents\MadyshevVisualComponents.csproj", "{0D48C669-27A3-4B01-BF5F-A27D7D4DEEAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadyshevUnvisualComponents", "MadyshevUnvisualComponents\MadyshevUnvisualComponents.csproj", "{1755FE45-FD6D-4636-AB40-375A93655267}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{0D48C669-27A3-4B01-BF5F-A27D7D4DEEAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D48C669-27A3-4B01-BF5F-A27D7D4DEEAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D48C669-27A3-4B01-BF5F-A27D7D4DEEAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1755FE45-FD6D-4636-AB40-375A93655267}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1755FE45-FD6D-4636-AB40-375A93655267}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1755FE45-FD6D-4636-AB40-375A93655267}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1755FE45-FD6D-4636-AB40-375A93655267}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
